@@ -165,16 +165,24 @@
               rel="noopener"
               class="rounded-full bg-gray-100 flex items-center justify-center h-10 w-10 shadow-lg cursor-pointer hover:bg-gray-200"
             >
-              <ion-icon
-                name="mail"
-                size="large"
-                class="text-customDarkBlue p-2"
-              ></ion-icon>
+              <ion-icon name="mail" size="large" class="text-customDarkBlue p-2"></ion-icon>
             </a>
           </span>
           <div class="mt-7 underline">
-            <a href="" class="block">Impressum</a>
-            <a href="" class="block">Datenschutzerklärung</a>
+            <a
+              href="https://bastianjakobi.com/documents/impressum.html"
+              class="block"
+              target="_blank"
+              rel="noopener"
+              >Impressum</a
+            >
+            <a
+              href="https://bastianjakobi.com/documents/datenschutz.html"
+              class="block"
+              target="_blank"
+              rel="noopener"
+              >Datenschutzerklärung</a
+            >
           </div>
         </div>
       </div>
