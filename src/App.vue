@@ -171,14 +171,14 @@
           <div class="mt-7 underline">
             <a
               href="https://bastianjakobi.com/documents/impressum.html"
-              class="block"
+              class="block text-lg"
               target="_blank"
               rel="noopener"
               >Impressum</a
             >
             <a
               href="https://bastianjakobi.com/documents/datenschutz.html"
-              class="block"
+              class="block text-lg mt-2"
               target="_blank"
               rel="noopener"
               >Datenschutzerklärung</a
