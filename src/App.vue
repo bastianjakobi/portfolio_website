@@ -34,8 +34,8 @@
               Bastian Jakobi
             </h1>
             <p class="font-body text-xl mt-2 sm:text-2xl xl:text-3xl xl:pr-36">
-              Javascript Entwickler mit zwei Jahren Erfahrung in den Bereichen Fullstack-Entwicklung und
-              UI-Design.
+              Javascript Entwickler mit zwei Jahren Erfahrung in den Bereichen Fullstack-Entwicklung
+              und UI-Design.
             </p>
             <div class="mt-4 flex xl:mt-10">
               <a
@@ -46,7 +46,7 @@
               >
               <a
                 data-scroll
-                href="#kontakt"
+                href="#footer"
                 class="px-5 py-2 rounded-md bg-customDarkBlue hover:bg-customDarkerBlue text-white text-sm lg:font-medium lg:text-lg font-body"
                 >Kontaktieren</a
               >
@@ -93,15 +93,14 @@
           </div>
         </div>
       </section>
-      <section aria-label="Projekte" class="mt-8 mb-8" id="projekte">
+      <section aria-label="Projekte" class="mt-8" id="projekte">
         <div class="pl-6 md:pl-20 pr-6 md:pr-20">
           <h2 class="font-heading text-3xl sm:text-4xl text-customDarkBlue">Projekte</h2>
-          <div
-            class="flex flex-col justify-center items-center md:flex-row mt-4 md:justify-between w-full"
-          >
+          <div class="flex flex-col items-stretch mt-4 w-full">
             <div
-              class=" w-11/12 md:w-5/12 md:block flex justify-center mb-8 md:mb-0"
+              class=" w-11/12 md:w-7/12 flex mb-8"
               v-for="project in projects"
+              v-bind:class="{ 'md:self-end': project.alignEnd == true }"
               :key="project.id"
             >
               <div class="rounded-lg h-auto w-full shadow-xl bg-blue-50 bg-opacity-80">
@@ -132,25 +131,54 @@
           </div>
         </div>
       </section>
-      <section id="kontakt" aria-label="Kontakt" class="pb-12 mt-12 md:mt-0 bg-blue-50">
-        <div class="pl-6 pr-6 md:pl-20 lg:pl-6 md:pr-20 pt-12 block md:flex">
-          <div class="w-full md:w-2/5 hidden lg:block p-4">
-            <img src="./assets/contact.svg" alt="" />
-          </div>
-          <div class="w-full md:w-3/5">
-            <h2 class="font-heading text-3xl sm:text-4xl text-customDarkBlue">Kontakt</h2>
-            <p class="font-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dignissimos animi
-              recusandae fugiat! Fuga exercitationem impedit, commodi repellendus eaque facilis
-              delectus at tempore iusto consequatur, fugiat animi labore inventore iste! Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Mollitia dignissimos animi recusandae
-              fugiat! Fuga exercitationem impedit, commodi repellendus eaque facilis delectus at
-              tempore iusto consequatur, fugiat animi labore inventore iste!
-            </p>
+    </main>
+    <footer id="footer" class="pb-8 mt-12 md:mt-0 bg-customDarkerBlue text-colors-white">
+      <div class="pt-12 flex items-center justify-center">
+        <div class="w-3/5 text-center flex flex-col">
+          <h2 class="font-heading text-2xl">
+            &copy; Bastian Jakobi {{ new Date().getFullYear() }}
+          </h2>
+          <span class="flex self-center mt-7">
+            <a
+              href="https://github.com/bastianjakobi"
+              target="_blank"
+              rel="noopener"
+              class="rounded-full bg-gray-100 flex items-center justify-center h-10 w-10 shadow-lg cursor-pointer hover:bg-gray-200 mr-4"
+            >
+              <ion-icon name="logo-github" size="large" class="text-customDarkBlue p-2"></ion-icon>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/bastian-jakobi-ba6792186/"
+              target="_blank"
+              rel="noopener"
+              class="rounded-full bg-gray-100 flex items-center justify-center h-10 w-10 shadow-lg cursor-pointer hover:bg-gray-200 mr-4"
+            >
+              <ion-icon
+                name="logo-linkedin"
+                size="large"
+                class="text-customDarkBlue p-2"
+              ></ion-icon>
+            </a>
+            <a
+              href="mailto:hello@bastianjakobi.com?subject=Neue%20Kontaktanfrage"
+              target="_blank"
+              rel="noopener"
+              class="rounded-full bg-gray-100 flex items-center justify-center h-10 w-10 shadow-lg cursor-pointer hover:bg-gray-200"
+            >
+              <ion-icon
+                name="mail"
+                size="large"
+                class="text-customDarkBlue p-2"
+              ></ion-icon>
+            </a>
+          </span>
+          <div class="mt-7 underline">
+            <a href="" class="block">Impressum</a>
+            <a href="" class="block">Datenschutzerklärung</a>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </footer>
     <transition name="fade">
       <a
         data-scroll
@@ -180,19 +208,19 @@
           id: 1,
           name: "vRooms",
           description:
-            "vRooms is a simple room based video chat application made with Vue.js, Vuetify and the Jitsi IFrame API.",
-          image: "vrooms",
+            "vRooms ist eine einfache Videochat App und basiert auf Vue.js, Vuetify und der Jitsi IFrame API.",
           projectUrl: "https://vrooms.netlify.app/",
           githubUrl: "https://github.com/bastianjakobi/vRooms",
+          alignEnd: false,
         },
         {
           id: 2,
-          name: "vRooms",
+          name: "SimpleToDo (eines meiner ersten Projekte)",
           description:
-            "vRooms is a simple room based video chat application made with Vue.js, Vuetify and the Jitsi IFrame API.",
-          image: "vrooms",
-          projectUrl: "https://vrooms.netlify.app/",
-          githubUrl: "https://github.com/bastianjakobi/vRooms",
+            "SimpleToDo ist eine auf Javascript und jQuery basierende ToDo-App, die als PWA heruntergeladen werden kann.",
+          projectUrl: "https://bastianjakobi-simpletodoapp.netlify.app/",
+          githubUrl: "https://github.com/bastianjakobi/simpletodo",
+          alignEnd: true,
         },
       ];
       return {
