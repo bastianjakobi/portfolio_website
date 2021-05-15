@@ -40,15 +40,15 @@
             <div class="mt-4 flex xl:mt-10">
               <a
                 data-scroll
-                href="#projekte"
+                href="#ueberMich"
                 class="px-5 py-2 mr-4 rounded-md bg-customDarkBlue hover:bg-customDarkerBlue text-white text-sm lg:font-medium lg:text-lg font-body"
-                >Projekte ansehen</a
+                >Über mich</a
               >
               <a
                 data-scroll
-                href="#footer"
+                href="#projekte"
                 class="px-5 py-2 rounded-md bg-customDarkBlue hover:bg-customDarkerBlue text-white text-sm lg:font-medium lg:text-lg font-body"
-                >Kontaktieren</a
+                >Projekte ansehen</a
               >
             </div>
           </div>
@@ -56,7 +56,7 @@
       </div>
     </header>
     <main>
-      <section aria-label="Über mich" class="pt-8 pb-8 bg-blue-50">
+      <section id="ueberMich" aria-label="Über mich" class="pt-8 pb-8 bg-blue-50">
         <div class="pl-6 md:pl-20 pr-6 md:pr-20">
           <div class="block md:flex mt-4">
             <div class="w-full md:w-3/5 font-body mb-4 mt-8 md:mb-0 md:mt-0">
